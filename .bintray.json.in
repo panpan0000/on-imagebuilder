@@ -1,26 +1,26 @@
 {
     "package": {
         "name": "on-imagebuilder",
-        "repo": "binary", 
+        "repo": "#STATIC_REPO_NAME#", 
         "subject": "rackhd"
     },
 
     "version": {
-        "name": "1.0"
+        "name": "#REVISION#"
     },
 
     "files":
         [
             {
-	        "includePattern": "/tmp/on-imagebuilder/builds/(.*)", "uploadPattern": "builds/$1", 
+	        "includePattern": "/tmp/on-imagebuilder/builds/(.*)", "uploadPattern": "#REVISION#/builds/$1", 
                 "matrixParams": { "override": 1 }
             },
             {
-                "includePattern": "/tmp/on-imagebuilder/ipxe/(.*)", "uploadPattern": "ipxe/$1",
+                "includePattern": "/tmp/on-imagebuilder/ipxe/(.*)", "uploadPattern": "#REVISION#/ipxe/$1",
                 "matrixParams": { "override": 1 }
             },
             {
-                "includePattern": "/tmp/on-imagebuilder/syslinux/(.*)", "uploadPattern": "syslinux/$1",
+                "includePattern": "/tmp/on-imagebuilder/syslinux/(.*)", "uploadPattern": "#REVISION#/syslinux/$1",
                 "matrixParams": { "override": 1 }
             }
         ],
